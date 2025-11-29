@@ -1,12 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>0歳の世界やさし化プロジェクト｜仲間募集</title>
+  <meta name="description" content="0歳が世界をやさしさで包むための仲間を募集する、ユーモアと平和がテーマの創作サイト。">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --fg: #2b2b2b;
+      --accent: #ff8da1;
+      --accent-2: #7cc9ff;
+      --card: #ffffff;
+      --muted: #666666;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1b1b1b;
+        --fg: #eaeaea;
+        --card: #242424;
+        --muted: #aaaaaa;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      background: var(--bg); color: var(--fg);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; padding: 64px 24px; text-align: center;
+    }
+    header h1 { margin: 0; font-size: clamp(28px, 4vw, 48px); }
+    header p { margin: 12px auto 0; max-width: 600px; font-size: clamp(14px, 2.3vw, 18px); }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+    .card {
+      background: var(--card); border-radius: 16px; padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    h2 { font-size: 24px; margin: 0 0 12px; }
+    h3 { font-size: 18px; margin: 16px 0 8px; }
+    .badge {
+      display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 13px;
+      background: #fff; color: #333; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .roles li { margin: 6px 0; }
+    .cta {
+      display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+      padding: 12px 18px; border-radius: 10px; font-weight: 700; transition: transform 0.06s ease, box-shadow 0.2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
+    form { display: grid; gap: 12px; }
+    input, select, textarea {
+      width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid #ddd; background: transparent; color: inherit;
+    }
+    textarea { min-height: 120px; }
+    .note { font-size: 13px; color: var(--muted); }
+    footer { text-align: center; padding: 32px 24px; color: var(--muted); }
+    .emoji { font-size: 24px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is my first GitHub Pages deployment!</p>
+  <header role="banner" aria-label="ヒーローセクション">
+    <h1>0歳の世界やさし化プロジェクト</h1>
+    <p>「世界征服」のかわりに、やさしさで世界を包みます。おむつの平和条約、ミルクの公平分配、お昼寝休戦協定。仲間、募集中。</p>
+    <p><span class="badge">創作・非暴力・ユーモア</span></p>
+  </header>
+
+  <main class="container" role="main">
+    <section class="card" aria-labelledby="mission">
+      <h2 id="mission">ミッション</h2>
+      <p><span class="emoji" aria-hidden="true">🍼</span> 0歳最高司令官（仮）が掲げるのは「世界やさし化」。泣いている人がいたら抱っこ、困っている人には一緒に考える、眠い人にはお昼寝を。</p>
+      <ul>
+        <li><strong>やさしさ条約:</strong> 争いの代わりに共有と共感。</li>
+        <li><strong>お昼寝同盟:</strong> 休む勇気を全員に。</li>
+        <li><strong>ミルクの公正分配:</strong> 資源はフェアに。</li>
+      </ul>
+      <a class="cta" href="#apply">仲間に応募する</a>
+    </section>
+
+    <section class="grid" aria-label="チーム募集役割">
+      <article class="card" aria-labelledby="role1">
+        <h3 id="role1">お昼寝司令官</h3>
+        <p>世界規模のお昼寝時間をコーディネート。寝落ちOK、アラーム不要。</p>
+        <ul class="roles">
+          <li><strong>必要資質:</strong> ふかふかを見分ける眼力、静かな配慮。</li>
+          <li><strong>任務:</strong> 静けさの確保、毛布配布計画。</li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="role2">
+        <h3 id="role2">ミルク補給士</h3>
+        <p>補給ラインはやさしさの血流。温度、タイミング、共有を設計。</p>
+        <ul class="roles">
+          <li><strong>必要資質:</strong> 思いやり、衛生意識。</li>
+          <li><strong>任務:</strong> 公正な分配、笑顔の確保。</li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="role3">
+        <h3 id="role3">平和アンバサダー</h3>
+        <p>地域の小さな優しさを可視化し、広げる役目。</p>
+        <ul class="roles">
+          <li><strong>必要資質:</strong> 傾聴、橋渡し。</li>
+          <li><strong>任務:</strong> ふれあいイベント運営、思い出共有。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="apply" class="card" aria-labelledby="apply-title">
+      <h2 id="apply-title">応募フォーム</h2>
+      <p class="note">これは創作サイトです。応募はフィクションであり、非暴力・思いやり・ユーモアのみを目的としています。</p>
+      <form action="#" method="post" aria-describedby="apply-desc">
+        <p id="apply-desc" class="sr-only">やさしさの仲間への応募フォーム。名前、連絡先、希望役割、ひと言を入力します。</p>
+
+        <label for="name"><strong>お名前</strong></label>
+        <input id="name" name="name" type="text" placeholder="例：やさし 太郎" required>
+
+        <label for="email"><strong>メールアドレス</strong></label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="role"><strong>希望役割</strong></label>
+        <select id="role" name="role" required>
+          <option value="">選択してください</option>
+          <option>お昼寝司令官</option>
+          <option>ミルク補給士</option>
+          <option>平和アンバサダー</option>
+        </select>
+
+        <label for="msg"><strong>ひと言メッセージ</strong></label>
+        <textarea id="msg" name="message" placeholder="あなたのやさしさミッションを教えてください"></textarea>
+
+        <button class="cta" type="submit" aria-label="送信ボタン">送信する</button>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="faq-title">
+      <h2 id="faq-title">よくある質問</h2>
+      <details>
+        <summary>「征服」をやめて「やさし化」にした理由は？</summary>
+        <p>暴力や害のない形で世界を良くしたいからです。ユーモアは歓迎、危害はお断りです。</p>
+      </details>
+      <details>
+        <summary>0歳は本当に司令官？</summary>
+        <p>設定はパロディです。現実では保護者のもとで安全第一、やさしさ最優先。</p>
+      </details>
+      <details>
+        <summary>応募するとどうなる？</summary>
+        <p>これは創作サイトです。あなたの「やさしさ宣言」をきっかけに、周囲に小さな善意を広げましょう。</p>
+      </details>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 0歳の世界やさし化プロジェクト — 創作・非暴力・ユーモア</p>
+    <p class="note">このページはフィクションです。現実の個人・団体とは関係ありません。</p>
+  </footer>
 </body>
 </html>
